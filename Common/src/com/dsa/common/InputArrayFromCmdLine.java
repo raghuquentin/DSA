@@ -15,9 +15,9 @@ public class InputArrayFromCmdLine {
         try(BufferedReader r = new BufferedReader(new InputStreamReader(System.in))){
             log.info("Please enter an array to sort...");
             String arr = r.readLine();
-           return Arrays.stream(arr.split(" ")).mapToInt(Integer::parseInt).toArray();
+           return Arrays.stream(arr.split(",")).mapToInt(Integer::parseInt).toArray();
         }catch (NumberFormatException e){
-            throw new InputArrNumberFormatException("Please enter numbers with space like .'1 10 12 34 9'",e);
+            throw new InputArrNumberFormatException("Please enter numbers with comma like .'1,10,12,34,9'",e);
         }
         catch (IOException e) {
             throw new NotReadableFromCmdLineException("Not able to read the value from command line",e);
