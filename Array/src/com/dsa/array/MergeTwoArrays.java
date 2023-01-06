@@ -40,6 +40,7 @@ public class MergeTwoArrays {
             i++;
             k++;
         }
+
         //case 3
         //if i pointer goes out of arr1, then we no need to check anything, copying all
         //the elements of arr2 to arr3
